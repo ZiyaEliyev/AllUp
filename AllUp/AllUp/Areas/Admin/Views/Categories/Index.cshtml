@@ -1,0 +1,114 @@
+﻿@model List<Category>
+
+
+<hr class="my-5" />
+
+<!-- Bordered Table -->
+<div class="card">
+    <div class="card-header" style="display:flex;justify-content:space-between">
+        <h2>
+            Categories
+        </h2>
+        <div>
+            <a asp-action="Create" class="btn btn-primary rounded-pill text-white" style="margin-right:10px">Create</a>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive text-nowrap">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>IsMain</th>
+                        <th>Children</th>
+                        <th>Parent</th>
+                        <th style="text-align:center">Status</th>
+                        <th style="text-align:right">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Category item in Model)
+                    {
+                        <tr>
+
+                            <td style="text-align:center">
+                                @if (item.IsMain)
+                                {
+                                    <img src="~/assets/images/@item.Image" style="width:90px;height:90px;object-fit:cover;">
+                                }
+                                else
+                                {
+                                    <span style="padding:6px 4px; background-color:red;color:white;">Yoxdur</span>
+                                }
+                            </td>
+                            
+                            
+
+                            <td>
+                                <i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>@item.Name</strong>
+                            </td>
+
+
+                            <td style="text-align:center">
+                                @if (item.IsMain)
+                                {
+                                    <span style="padding:6px 4px; background-color:green;color:white;">Main</span>
+                                }
+                                else
+                                {
+                                    <span style="padding:6px 4px; background-color:green;color:white;">Child</span>
+                                }
+                            </td> 
+                            <td style="text-align:center">
+                                @if (item.IsMain)
+                                {
+                                    @foreach (Category child in item.Children)
+                                    {
+                                        <div>@child.Name</div>
+                                    }
+                                }
+                                else
+                                {
+                                    <span style="padding:6px 4px; background-color:green;color:white;">Yoxdur</span>
+                                }
+                            </td>
+
+                            
+
+                            <td style="text-align:center">
+                                @if (item.IsDeactive)
+                                {
+                                    <span style="padding:6px 4px; background-color:red;color:white;">Deactive</span>
+                                }
+                                else
+                                {
+                                    <span style="padding:6px 4px; background-color:green;color:white;">Active</span>
+                                }
+                            </td>
+
+                            <td>
+                                <div style="display:flex;justify-content:flex-end">
+                                    <a asp-action="Detail" asp-route-id="@item.Id" class="btn btn-warning rounded-pill text-white" style="margin-right:10px">Detail</a>
+                                    <a asp-action="Update" asp-route-id="@item.Id" class="btn btn-primary rounded-pill text-white" style="margin-right:10px">Update</a>
+                                    @if (item.IsDeactive)
+                                    {
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-success rounded-pill text-white" style="margin-right:10px;width:117px;">Activate</a>
+
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="Activity" asp-route-id="@item.Id" class="btn btn-danger rounded-pill text-white" style="margin-right:10px;width:117px;">Deactivate</a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!--/ Bordered Table -->
+
+<hr class="my-5" />
