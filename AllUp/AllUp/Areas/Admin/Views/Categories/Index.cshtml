@@ -39,7 +39,7 @@
                                 }
                                 else
                                 {
-                                    <span style="padding:6px 4px; background-color:red;color:white;">Yoxdur</span>
+                                    <span style="padding:6px 4px; background-color:red;color:white;border-radius:4px">Yoxdur</span>
                                 }
                             </td>
                             
@@ -53,11 +53,11 @@
                             <td style="text-align:center">
                                 @if (item.IsMain)
                                 {
-                                    <span style="padding:6px 4px; background-color:green;color:white;">Main</span>
+                                    <span style="padding:6px 4px; background-color:green;color:white;border-radius:4px">Main</span>
                                 }
                                 else
                                 {
-                                    <span style="padding:6px 4px; background-color:green;color:white;">Child</span>
+                                    <span style="padding:6px 4px; background-color:red;color:white;border-radius:4px">Child</span>
                                 }
                             </td> 
                             <td style="text-align:center">
@@ -70,7 +70,18 @@
                                 }
                                 else
                                 {
-                                    <span style="padding:6px 4px; background-color:green;color:white;">Yoxdur</span>
+                                    <span style="padding:6px 4px; background-color:red;color:white;border-radius:4px">Yoxdur</span>
+                                }
+                            </td>  
+                            
+                            <td style="text-align:center">
+                                @if (!item.IsMain)
+                                {
+                                    @item.Parent.Name
+                                }
+                                else
+                                {
+                                    <span style="padding:6px 4px; background-color:red;color:white;border-radius:4px">Yoxdur</span>
                                 }
                             </td>
 
@@ -79,11 +90,11 @@
                             <td style="text-align:center">
                                 @if (item.IsDeactive)
                                 {
-                                    <span style="padding:6px 4px; background-color:red;color:white;">Deactive</span>
+                                    <span style="padding:6px 4px; background-color:red;color:white;border-radius:4px">Deactive</span>
                                 }
                                 else
                                 {
-                                    <span style="padding:6px 4px; background-color:green;color:white;">Active</span>
+                                    <span style="padding:6px 4px; background-color:green;color:white;border-radius:4px">Active</span>
                                 }
                             </td>
 
