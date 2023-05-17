@@ -15,7 +15,7 @@ namespace AllUp.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            return View(await _db.Categories.Where(x=>x.IsMain).ToListAsync());
+            return View(await _db.Categories.Where(x => x.IsMain).Where(x => !x.IsDeactive).ToListAsync());
         }
 
         public IActionResult Error()
