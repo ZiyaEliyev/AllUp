@@ -10,5 +10,6 @@ namespace AllUp.DAL
              
         }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Subscribe> Subscribes { get; set; }
     }
 }

@@ -71,6 +71,13 @@ namespace AllUp.Areas.Admin.Controllers
             }
             await _db.Categories.AddAsync(category);
             await _db.SaveChangesAsync();
+            List<Subscribe> subscribes = await _db.Subscribes.ToListAsync();
+            string message = "salam";
+            string title = "test";
+            foreach (Subscribe sub in subscribes)
+            {
+                await Helpers.SendMessageAsync(title,message, sub.Email);
+            }
             return RedirectToAction("Index");
         }
         #endregion

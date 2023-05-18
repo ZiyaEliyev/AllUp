@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AOYJNnsPnqg7eMiyVOefP9Kw/XoOSGsNfUpGdSoNIfA=",
+  "Hash": "aEfvcIJurcx0ajI671l69wrxt/Jh0mMqvpjfRT/jWpo=",
   "Source": "AllUp",
   "BasePath": "_content/AllUp",
   "Mode": "Default",
@@ -2990,6 +2990,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\favicon.png"
+    },
+    {
+      "Identity": "C:\\Users\\USER\\Desktop\\AllUp\\AllUp\\AllUp\\wwwroot\\assets\\images\\ff03284d-03bd-4e95-a340-ac14e72d62dalarge.jpg",
+      "SourceId": "AllUp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\USER\\Desktop\\AllUp\\AllUp\\AllUp\\wwwroot\\",
+      "BasePath": "_content/AllUp",
+      "RelativePath": "assets/images/ff03284d-03bd-4e95-a340-ac14e72d62dalarge.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\ff03284d-03bd-4e95-a340-ac14e72d62dalarge.jpg"
     },
     {
       "Identity": "C:\\Users\\USER\\Desktop\\AllUp\\AllUp\\AllUp\\wwwroot\\assets\\images\\flag\\1.jpg",
